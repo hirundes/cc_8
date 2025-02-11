@@ -32,15 +32,17 @@ calculateServiceFee(500, "Standard"); // Expected output: "Service Fee: $50.00"
 
 
 //Task 4 - Car Rental Cost Calculation
-function calculateRentalCost(days, carType, insurance = false) {   //function calculateShippingCost
+function calculateRentalCost(days, carType, insurance = false) {   //function calculateRentalCost
     let rentalCost = 0;
-    if (carType === "Economy") rentalCost = 40 * days;    //carType: economy = 40 rentalCost
-    else if (carType === "Standard") rentalCost = 60 * days;
-    else if (carType === "Luxury") rentalCost = 100 * days;    
-    if (insurance) rentalCost += 20 * days;      
+    if (carType === "Economy") rentalCost = 40 * days;    //carType: economy = 40/dayrentalCost
+    else if (carType === "Standard") rentalCost = 60 * days;    //carType: standard = 60/day rentalCost
+    else if (carType === "Luxury") rentalCost = 100 * days;     //carType: luxury = 100/day rentalCost 
+    if (insurance) rentalCost += 20 * days;     //insurance = +20/day      
     
-    console.log(`Total Rental Cost: $${rentalCost}`);     //logged shippingCost
+    console.log(`Total Rental Cost: $${rentalCost}`);     //logged rentalCost
 };
 console.log("---Task 4---");
 calculateRentalCost(3, "Economy", true); // Expected output: "Total Rental Cost: $180"
 calculateRentalCost(5, "Luxury", false); // Expected output: "Total Rental Cost: $500"
+
+
