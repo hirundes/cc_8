@@ -55,3 +55,15 @@ console.log("---Task 5---");
 calculateLoanPayment(1000, 0.05, 2); // Expected output: "Total Payment: $1100.00"
 calculateLoanPayment(5000, 0.07, 3); // Expected output: "Total Payment: $6050.00"
 
+
+//Task 6 - Identifying Large Transactions
+function filterLargeTransactions(transactions, filterFunction) {    //higher order function filterLargeTransactions
+    let transactionOrders = transactions.filter(filterFunction);    //defined transactionOrders and .filter() to filter
+    console.log(`Filtered Large Transactions: ${transactionOrders}`);     //logged filtered large transactions: transactionOrders
+};
+console.log("---Task 6---");
+let transactions = [200, 1500, 3200, 800, 2500];
+filterLargeTransactions(transactions, amount => amount > 1000);
+// Expected output: [1500, 3200, 2500]
+
+
