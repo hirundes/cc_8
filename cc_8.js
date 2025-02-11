@@ -46,3 +46,12 @@ calculateRentalCost(3, "Economy", true); // Expected output: "Total Rental Cost:
 calculateRentalCost(5, "Luxury", false); // Expected output: "Total Rental Cost: $500"
 
 
+//Task 5 - Loan Payment Calculation
+function calculateLoanPayment(principle, rate, time) {    //function calculateLoanPayment
+    let totalPayment = (principle + (principle * rate * time)).toFixed(2);      //formula totalPayment w/ 2 decimal places
+    console.log(`Total Interest: $${totalPayment}`);     //logged totalPayment
+}
+console.log("---Task 5---");
+calculateLoanPayment(1000, 0.05, 2); // Expected output: "Total Payment: $1100.00"
+calculateLoanPayment(5000, 0.07, 3); // Expected output: "Total Payment: $6050.00"
+
